@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:the_moviers/page/home_page/view/widgets/grid_content.dart';
 
 /// @author Aeri created on 3/23/2021
 
@@ -19,12 +20,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: FloatingActionButton(
-          onPressed: (){
-            Modular.to.pushNamed('/detail');
-          },
-          child: Text("Detail Page"),
-        ),
+           child: ContentGridWidget()
       ),
     );
   }
