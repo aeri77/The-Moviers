@@ -23,6 +23,16 @@ class _ContentGridWidgetState extends State<ContentGridWidget> {
     _menuList.add(MenuList("Pagi", "https://www.jquery-az.com/wp-content/uploads/2018/07/7.0_3-Git-remote-add-local.png"));
     _menuList.add(MenuList("Pagi", "https://www.jquery-az.com/wp-content/uploads/2018/07/7.0_3-Git-remote-add-local.png"));
     _menuList.add(MenuList("Pagi", "https://www.jquery-az.com/wp-content/uploads/2018/07/7.0_3-Git-remote-add-local.png"));
+    _menuList.add(MenuList("hello", "https://www.jquery-az.com/wp-content/uploads/2018/07/7.0_3-Git-remote-add-local.png"));
+    _menuList.add(MenuList("Hai", "https://www.jquery-az.com/wp-content/uploads/2018/07/7.0_3-Git-remote-add-local.png"));
+    _menuList.add(MenuList("hello", "https://www.jquery-az.com/wp-content/uploads/2018/07/7.0_3-Git-remote-add-local.png"));
+    _menuList.add(MenuList("Hai", "https://www.jquery-az.com/wp-content/uploads/2018/07/7.0_3-Git-remote-add-local.png"));
+    _menuList.add(MenuList("hello", "https://www.jquery-az.com/wp-content/uploads/2018/07/7.0_3-Git-remote-add-local.png"));
+    _menuList.add(MenuList("Hai", "https://www.jquery-az.com/wp-content/uploads/2018/07/7.0_3-Git-remote-add-local.png"));
+    _menuList.add(MenuList("hello", "https://www.jquery-az.com/wp-content/uploads/2018/07/7.0_3-Git-remote-add-local.png"));
+    _menuList.add(MenuList("Hai", "https://www.jquery-az.com/wp-content/uploads/2018/07/7.0_3-Git-remote-add-local.png"));
+    _menuList.add(MenuList("hello", "https://www.jquery-az.com/wp-content/uploads/2018/07/7.0_3-Git-remote-add-local.png"));
+    _menuList.add(MenuList("Hai", "https://www.jquery-az.com/wp-content/uploads/2018/07/7.0_3-Git-remote-add-local.png"));
   }
 
   
@@ -30,12 +40,7 @@ class _ContentGridWidgetState extends State<ContentGridWidget> {
   @override
   Widget build(BuildContext context) {
 
-    return Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Expanded(
-                child: MediaQuery.removePadding(
+    return MediaQuery.removePadding(
                     context: context,
                     removeTop: true,
                     child: GridView.count(
@@ -43,8 +48,9 @@ class _ContentGridWidgetState extends State<ContentGridWidget> {
                       // horizontal, this produces 2 rows.
                       crossAxisCount: 2,
                       childAspectRatio: 4 / 4,
+                      scrollDirection: Axis.vertical,
+                      shrinkWrap: true,
                       primary: false,
-                      // Generate 100 src.widgets that display their index in the List.
                       children: List.generate(_menuList.length, (int index) {
                         return InkWell(
                             onTap: () {
@@ -125,11 +131,7 @@ class _ContentGridWidgetState extends State<ContentGridWidget> {
                               ),
                             ));
                       }),
-                    )),
-              )
-            ],
-          ),
-        );
+                    ));
 
   }
 }
