@@ -7,10 +7,6 @@ import 'modules/app_module.dart';
 
 void main() => runApp(ModularApp(module: AppModule(), child: MyApp()));
 
-// {
-//   runApp(MyApp());
-// }
-
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

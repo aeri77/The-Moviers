@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
+import 'package:the_moviers/page/home_page/view/widgets/sliver_appbar.dart';
 
 /// @author Aeri created on 3/23/2021
 
@@ -15,17 +15,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: FloatingActionButton(
-          onPressed: (){
-            Modular.to.pushNamed('/detail');
-          },
-          child: Text("Detail Page"),
-        ),
-      ),
+      body: SliverAppbarHome()
     );
   }
 }
